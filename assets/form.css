@@ -1,0 +1,18 @@
+.form_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.form_textarea{
+    width: 300px;
+    height: 150px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.form_textarea_label{
+font-weight: bold;
+}
+.translate_button{
+    margin-top: 20px;
+}
