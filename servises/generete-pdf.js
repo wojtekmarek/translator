@@ -17,7 +17,7 @@ const wrapText = (text, width, font, fontSize) => {
   result += line;
   return result;
 }
-const generate_page = async (text, pdf, font, fontSize) => {
+const generate_page = (text, pdf, font, fontSize) => {
   
   const page = pdf.addPage();
 
@@ -40,7 +40,7 @@ export default async function generate_pdf(array) {
   const fontSize = 15;
   const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
 
-  await array.forEach(element => {
+   array.forEach(element => {
 
     generate_page(element, pdfDoc, timesRomanFont, fontSize);
   });

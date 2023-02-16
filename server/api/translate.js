@@ -1,10 +1,10 @@
-import text_translate from "../../middleware/text-translate";
-import generate_pdf from "../../middleware/generete-pdf";
+import text_translate from "../../servises/text-translate";
+import generate_pdf from "../../servises/generete-pdf";
 export default defineEventHandler(async (event) => {
-  const myPromise = await new Promise(async (resolve, reject) => {
+ return new Promise(async (resolve, reject) => {
     await readBody(event)
       
-      .then(async text => {
+      .then( text => {
 
         text_translate(text)
           .then(async array => {
@@ -18,12 +18,5 @@ export default defineEventHandler(async (event) => {
         //handle any errors here
       });
   });
-
-  return myPromise
-
-
-
-
-
 
 })
